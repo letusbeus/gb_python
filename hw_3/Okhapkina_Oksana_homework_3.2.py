@@ -25,6 +25,18 @@ def num_translate(eng_num):
 
 num_translate("Ten")
 
+# Решение через .get
+
+
+def num_translate(eng_num):
+    if eng_num.istitle():
+        print(numbers.get(eng_num.lower()).title())
+    else:
+        print(numbers.get(eng_num, None))
+
+
+num_translate('Two')
+
 # Вариант 2: числительное передается в консоль пользователем
 
 eng_num_1 = input('Enter the number: ')
@@ -40,13 +52,3 @@ def num_translate_adv():
 
 
 num_translate_adv()
-
-
-def num_translate(eng_num):
-    if eng_num.istitle():
-        print(numbers.get(eng_num.lower()).title())
-    else:
-        print(numbers.get(eng_num, None))
-
-
-num_translate('Two')
