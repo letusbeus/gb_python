@@ -18,12 +18,13 @@ from colorama import Fore, Style
 
 
 class TrafficLight:
-    __color = ['красный', 'желтый', 'зеленый']
+    def __init__(self):
+        self.__color = ['красный', 'желтый', 'зеленый']
 
     def running(self):
         i = 0
         while i < 3:
-            print(f'Внимание! Загорелся {TrafficLight.__color[i]} цвет светофора')
+            print(f'Внимание! Загорелся {self.__color[i]} цвет светофора')
             if i == 0:
                 sleep(7)
                 i += 1
@@ -45,19 +46,20 @@ class TrafficLight:
 
 
 class TrafficLight_:
-    __color = ['красный', 'желтый', 'зеленый']
+    def __init__(self):
+        self.__color = ['красный', 'желтый', 'зеленый']
 
     def running(self):
         i = 0
         while i < 3:
             if i == 0:
-                print(f'{Fore.RED}{TrafficLight_.__color[i].upper()}{Style.RESET_ALL}')
+                print(f'{Fore.RED}{self.__color[i].upper()}{Style.RESET_ALL}')
                 sleep(7)
             elif i == 1:
-                print(f'{Fore.YELLOW}{TrafficLight_.__color[i].upper()}{Style.RESET_ALL}')
+                print(f'{Fore.YELLOW}{self.__color[i].upper()}{Style.RESET_ALL}')
                 sleep(2)
             elif i == 2:
-                print(f'{Fore.GREEN}{TrafficLight_.__color[i].upper()}{Style.RESET_ALL}')
+                print(f'{Fore.GREEN}{self.__color[i].upper()}{Style.RESET_ALL}')
                 sleep(15)
             i += 1
 
